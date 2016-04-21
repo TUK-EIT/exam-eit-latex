@@ -1,0 +1,90 @@
+%
+% Datei:			Einstellungen.tex
+% Ersteller: 	Daniel Görges
+% Datum:			15.02.2016
+% Status:			Vorlage
+%
+
+\usepackage{eurosym}
+
+%
+% Einstellungen für die Klasse EXAM
+%
+\pointpoints{Punkt}{Points}
+\qformat{\textbf{\large Problem \thequestion}\quad\textbf{\large(\thepoints)}\hfill\rule[-3ex]{0ex}{3ex}}
+
+%
+% AMS-Operatoren
+%
+\DeclareMathOperator{\sign}{sign}
+
+%
+% Punkte auf der Nebendiagonale
+%
+\newcommand{\rdots}{\mathinner{
+  \mkern1mu\raise1pt\hbox{.}
+  \mkern2mu\raise4pt\hbox{.}
+  \mkern2mu\raise7pt\vbox{\kern7pt\hbox{.}}\mkern1mu}}
+
+%
+%Vektoren/Matizen fett
+%
+\renewcommand{\vec}[1]{\boldsymbol{#1}}
+
+%ermöglicht fette griechische Buchstaben
+\newcommand{\MB}[1]{{\mbox{\mathversion{bold}$#1$}}}
+
+%
+%Matrix (runde Klammer)
+%
+\newcommand{\mat}[1]{\begin{pmatrix}#1\end{pmatrix}}
+
+%
+%Darstellung von Hinweisen
+%
+\newcommand{\Hinweis}{\textbf{Hinweis:~}}
+\newcommand{\Hint}{\textbf{Hint:~}}
+\newcommand{\Annotation}{\textbf{Annotation:~}}
+
+%
+%Partielle Ableitung mit Potenz.
+%Nutzung: \parfr[potenz(optional)]{zähler}{nenner}
+%
+\newcommand{\parfr}[3][\empty]{
+	\ifthenelse{\equal{#1}{\empty}}
+	{\frac{\partial {#2}}{\partial {#3}}}
+	{\frac{\partial^{#1} {#2}}{\partial {#3}^{#1}}}
+	}
+	
+%
+%Normale Ableitung mit Potenz
+%Nutzung: \dfr[potenz(optional)]{zähler}{nenner}
+%
+\newcommand{\dfr}[3][\empty]{
+	\ifthenelse{\equal{#1}{\empty}}
+	{\frac{\text{d} {#2}}{\text{d} {#3}}}
+	{\frac{\text{d}^{#1} {#2}}{\text{d} {#3}^{#1}}}
+	}
+
+%
+%Zahl in einem Kreis, geht im Text und auch in eine Formel
+%
+\newcommand{\mycirc}[1]{\mbox{\textcircled{\footnotesize #1}}}
+
+%
+%Bepunktung, geht im Text und auch in eine Formel
+%
+\newcommand{\Punkte}[1]{\text{~\textbf{($\boldsymbol{#1}$~P)}}}
+
+
+\addto\captionsenglish{\renewcommand{\figurename}{Fig.}}
+
+%
+% Angaben zu der Prüfung
+%
+\newcommand{\pruefungsname}{Principles of Electrical and Computer Engineering for Commericial Vehicle Technology}
+\newcommand{\pruefungsnamekurz}{Principles of ECE for CVT}
+\newcommand{\pruefungsnummer}{20552}
+\newcommand{\pruefungsdatum}{22 March 2016}
+\newcommand{\pruefungszeitraum}{WS 2015/2016}
+\newcommand{\pruefungszettel}{1}

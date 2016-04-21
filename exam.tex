@@ -1,0 +1,99 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Hauptdokument
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\documentclass[12pt, a4paper, twoside]{exam}
+\usepackage{ german,
+             %umlaut,
+             makeidx,
+             amsfonts, epsf,
+             amsmath,
+             bibgerm,
+             epsfig,
+             fancyheadings,
+             subfigure}
+\usepackage{amsthm,amssymb,longtable,array,bm,varioref,graphicx,url,moreverb,ifthen,mdwlist,icomma}
+\usepackage{capt-of}
+\usepackage[english]{babel}
+\usepackage{layout,ae,float,trsym,trfsigns}
+\usepackage[T1]{fontenc}
+\usepackage[ansinew]{inputenc}
+\usepackage[nice]{units}
+\usepackage[dvips]{rotating}
+\usepackage[dvips]{geometry}
+\usepackage{rotating}
+\usepackage{lastpage}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Formatierungen
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\setlength{\parindent}{0cm}
+\setlength{\parskip}{2ex}
+\setlength{\textwidth}{160mm} \setlength{\topmargin}{-6mm}
+\setlength{\textheight}{230mm}
+
+\setlength{\oddsidemargin}{0mm} \setlength{\evensidemargin}{0mm}
+
+\clubpenalty=1000000 \widowpenalty=1000000
+
+\include{settings}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Beginn des Dokumentes
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{document}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Einstellung der FancyHeadings (später durch Koma ersetzen!)
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\pagestyle{fancy}
+
+\lhead
+   [\sc
+   	Exam \pruefungsnummer~\pruefungsnamekurz
+   ]
+   {\sc
+   Name: \hspace{6.5cm} Matriculation Number:}
+
+\rhead
+   [\sc
+   	\pruefungszeitraum 
+ 	 ]
+   {
+   }
+
+%\cfoot{--\hspace{1ex}page \thepage \hspace{1ex}--}
+\cfoot{--\hspace{1ex}page \thepage \hspace{1ex}of\hspace{1ex} \pageref{LastPage} \hspace{1ex}--}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Deckblatt
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\include{frontpage}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Punkteberechnung
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\include{points}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Aufgaben
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{questions}
+\clearpage
+
+\input{tasks/task1}
+\clearpage
+
+% TODO: Add More tasks here
+
+\end{questions}
+
+\include{Formeln/Correspondence_Table}
+
+%%%%%%%%%%%%%%%%%
+
+\end{document}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
