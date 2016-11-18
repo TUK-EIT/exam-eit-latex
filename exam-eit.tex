@@ -12,7 +12,7 @@
 \togglefalse{isGerman}
 
 % TODO: uncomment this line for German document
-%\toggletrue{isGerman}
+\toggletrue{isGerman}
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -58,28 +58,33 @@
 \clearpage
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%% Tables of Points
+%% Tables for Scoring
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\include{points}
-
+\input{includes/scoring.tex}
+\clearpage
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %% Questions / Tasks
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{questions}
 
+% TODO: add your own tasks here
 \clearpage
-\input{tasks/task1}
+\input{questions/example.tex}
+\input{questions/example.tex}
+
+\clearpage
 \todo{add your questions here}
+
 \clearpage
-
-
 \end{questions}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %% Formulas / References
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\include{Formeln/Correspondence_Table}
+
+% TODO: add your own references here
+\include{references/example.tex}
 
 
 
