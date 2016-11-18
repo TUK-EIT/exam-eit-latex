@@ -12,12 +12,17 @@
              epsfig,
              fancyheadings,
              subfigure}
+\usepackage[utf8]{inputenc} % set up unicode input
+\usepackage[T1]{fontenc} % set 8-bit font enconding
+	% see: http://tex.stackexchange.com/questions/664/why-should-i-use-usepackaget1fontenc
+\usepackage{paratype} % PTSans - corporate design font of the University of Kaiserslautern
+	\renewcommand{\familydefault}{\sfdefault}
+\usepackage{wallpaper} % for background image on title page
+
 \usepackage{amsthm,amssymb,longtable,array,bm,varioref,graphicx,url,moreverb,ifthen,mdwlist,icomma}
 \usepackage{capt-of}
 \usepackage[english]{babel}
 \usepackage{layout,ae,float,trsym,trfsigns}
-\usepackage[T1]{fontenc}
-\usepackage[ansinew]{inputenc}
 \usepackage[nice]{units}
 \usepackage[dvips]{rotating}
 \usepackage[dvips]{geometry}
