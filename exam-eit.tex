@@ -40,36 +40,22 @@
 % import global settings file
 \input{includes/settings.tex}
 
+% TODO: add own settings here
 
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Document Start
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{document}
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%% Einstellung der FancyHeadings (s\päter durch Koma ersetzen!)
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\pagestyle{fancy}
-
-\lhead
-   [\sc
-   	Exam \examID~\examTitleShort
-   ]
-   {\sc
-   Name: \hspace{6.5cm} Matriculation Number:}
-
-\rhead
-   [\sc
-   	\examPeriod 
- 	 ]
-   {
-   }
-
-%\cfoot{--\hspace{1ex}page \thepage \hspace{1ex}--}
-\cfoot{--\hspace{1ex}page \thepage \hspace{1ex}of\hspace{1ex} \pageref{LastPage} \hspace{1ex}--}
+% apply header & footer style
+\pagestyle{otherpages}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %% Front Page
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\include{frontpage}
+\input{frontpage.tex}
+\clearpage
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %% Tables of Points
