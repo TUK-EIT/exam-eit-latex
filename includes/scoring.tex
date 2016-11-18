@@ -26,22 +26,24 @@
 	\gradetable[v]
 \end{center}
 
+
 % table for total result
 \begin{table}[h]
 	\centering
-	\begin{tabular}{|l||c|}
+	\cellwidth{2.2em}
+	\begin{tabular}{| >{\centering\arraybackslash}p{2cm} | p{4cm} |}
 		\hline
 		\iftoggle{isGerman}{
-			Punkte gesamt & \numpoints \\ \hline 
-			Punkte erreicht & \hspace{3cm} \\ \hline
-			Note & \\ \hline
+			\textbf{Note} 
 		}{
-			Total points & \numpoints \\ \hline 
-			Achieved points & \hspace{3cm} \\ \hline
-			Grade & \\ \hline
-		} 
+			\textbf{Grade} 
+		}
+		& \parbox{0pt}{\rule{0pt}{5ex+\baselineskip}} \\
+		\hline
 	\end{tabular}
 \end{table}
+
+\vspace{1 cm}
 
 
 % Post-exam review documentation
@@ -52,14 +54,14 @@
 }
 \begin{table}[h]
 	\centering
-	\begin{tabular}{*{2}{|l|}}
+	\begin{tabular}{| >{\centering\arraybackslash}p{2cm} | p{4cm} |}
 		\hline
 		\iftoggle{isGerman}{
-			\textsc{Datum} &  \\ \hline
-			\textsc{Unterschrift} & \hspace{4cm} \\ \hline
+			\textsc{Datum} &  \parbox{0pt}{\rule{0pt}{5ex+\baselineskip}} \\ \hline
+			\textsc{Unterschrift} & \parbox{0pt}{\rule{0pt}{5ex+\baselineskip}} \\ \hline
 		}{
-			\textsc{Date} &  \\ \hline
-			\textsc{Signature} & \hspace{4cm} \\ \hline
+			\textsc{Date} & \parbox{0pt}{\rule{0pt}{5ex+\baselineskip}} \\ \hline
+			\textsc{Signature} & \parbox{0pt}{\rule{0pt}{5ex+\baselineskip}} \\ \hline
 		} 
 	\end{tabular}
 \end{table}
