@@ -1,47 +1,64 @@
-%
-% Datei: 			Deckblatt_engl.tex
-% Ersteller: 	Daniel Görges
-% Datum:			15.02.2016
-% Status:			Vorlage
-%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Front Page
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 % include EIT background image on first page
 \ThisCenterWallPaper{1.0}{images/background-eit.pdf}
 
-%\begin{titlepage}
-    \begin{center}
-        \begin{table}[htbp]
-            \begin{minipage}[t]{11cm}
-               University of Kaiserslautern  \\ Department of Electrical and Computer Engineering
-            \end{minipage}
-            \begin{minipage}[t]{4.9cm}              	
-							 \begin{flushright}
-							   \examDate
-							 \end{flushright}
-            \end{minipage}
-        \end{table} \vspace{1.0cm}
+% apply front page header and footer settings here
+\thispagestyle{frontpage}
 
-        {\Large\bf\sc Exam \examID\\ in \\
-        \examTitleLong \\}\vspace{1.0cm}
-    \end{center}
+% fields for name and matriculation number
+\iftoggle{isGerman}{
+	Name: \hspace{7cm} Matrikelnummer:
+}{
+	Name: \hspace{7cm} Matriculation Number:
+}\vspace{-10}
+\\
+\rule{\textwidth}{0.5pt}
 
-    \underline{Permitted aids:}
+
+\begin{center}
+	% title and ID
+	{\Large\bf\sc
+		\iftoggle{isGerman}
+		{
+			Klausur
+		}
+		{
+			Exam
+		}
+	\examID\\ in \\
+	\examTitleLong \\}\vspace{1.0cm}
+	
+	% date
+	\examDate
+
+\end{center}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Exam Regulations
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\todo{put your own regulations here!}
+
+\underline{Permitted aids:}
+
+Slide-rule or {\bf {non}}programmable calculator, \textbf{maximally 1 handwritten DIN A4 sheet}, dictionaries ({\bf non-electronic}), writing and drawing material.
     
-    Slide-rule or {\bf {non}}programmable calculator, \textbf{maximally \allowedNumberOfSupportPages~handwritten DIN A4 sheet}, dictionaries ({\bf non-electronic}), writing and drawing material.
-    
-    Using non-permitted aids like \textbf{scratch paper}, script, lecture notes, books, copies, programmable calculators or laptops is a deceit and leads to the non-admission of the exam.\\
+Using non-permitted aids like \textbf{scratch paper}, script, lecture notes, books, copies, programmable calculators or laptops is a deceit and leads to the non-admission of the exam.\\
   
-    \underline{Please note:}
-    \begin{enumerate}
-    	\item Write your \textbf{name} and \textbf{matriculation number} on every sheet.
-   		\item The calculations and solutions to the problems must be written on the related pages. If the space is not sufficient, further sheets are provided. Solutions on those sheets will be considered 
-   		      only if there exists a reference to the problem and the solution on the extra sheet is marked correspondingly.
-   	  \item Don't write with a pencil. Don't use red or green color.
-  	  \item {\bf Generally every solution must be proved by calculation or explanation.}
-    \end{enumerate}
+\underline{Please note:}
+\begin{enumerate}
+	\item Write your \textbf{name} and \textbf{matriculation number} on every sheet.
+	\item The calculations and solutions to the problems must be written on the related pages. If the space is not sufficient, further sheets are provided. Solutions on those sheets will be considered 
+	      only if there exists a reference to the problem and the solution on the extra sheet is marked correspondingly.
+	\item Don't write with a pencil. Don't use red or green color.
+	\item {\bf Generally every solution must be proved by calculation or explanation.}
+\end{enumerate}
     
-    \underline{Statement:}
-    
-    With accepting the exam I declare to be able to participate in the exam \examTitleLong~according to my health status.
-       
+\underline{Statement:}
+
+With accepting the exam I declare to be able to participate in the exam \examTitleLong~according to my health status.
 %\end{titlepage}

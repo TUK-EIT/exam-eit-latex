@@ -17,16 +17,22 @@
 \usepackage{wallpaper}
 
 % language support
-\iftoggle{isGerman}
-{
-		  	\usepackage[ngerman]{babel}   % German language support 
-}
-{
-		  	\usepackage[english]{babel} % English language support
+\iftoggle{isGerman}{
+  	\usepackage[ngerman]{babel}   % German language support 
+}{
+	\usepackage[english]{babel} % English language support
 }
 
 % colors for \todo{} command
 \usepackage{color}
+
+% nice headers and footers
+\usepackage{fancyhdr}
+
+% for correct page counting
+\usepackage{lastpage}
+
+
 
 
 % TODO: clean following packages
@@ -35,9 +41,7 @@
 	amsmath,
 	bibgerm,
 	epsfig,
-	fancyheadings,
 	subfigure}
-
 
 \usepackage{amsthm,amssymb,longtable,array,bm,varioref,graphicx,url,moreverb,ifthen,mdwlist,icomma}
 \usepackage{capt-of}
