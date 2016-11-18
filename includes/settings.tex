@@ -1,11 +1,7 @@
-%
-% Datei:			Einstellungen.tex
-% Ersteller: 	Daniel Gˆrges
-% Datum:			15.02.2016
-% Status:			Vorlage
-%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Template configuration
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\usepackage{eurosym}
 
 %
 % Einstellungen f¸r die Klasse EXAM
@@ -79,12 +75,18 @@
 
 \addto\captionsenglish{\renewcommand{\figurename}{Fig.}}
 
-%
-% Angaben zu der Pr¸fung
-%
-\newcommand{\pruefungsname}{Principles of Electrical and Computer Engineering for Commericial Vehicle Technology}
-\newcommand{\pruefungsnamekurz}{Principles of ECE for CVT}
-\newcommand{\pruefungsnummer}{20552}
-\newcommand{\pruefungsdatum}{22 March 2016}
-\newcommand{\pruefungszeitraum}{WS 2015/2016}
-\newcommand{\pruefungszettel}{1}
+% define todo command
+\definecolor{darkred}{rgb}{.6,0,0}
+\newcommand{\todo}[1]{{\bf \color{darkred}TODO: [{#1}]}}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Formatierungen
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\setlength{\parindent}{0cm}
+\setlength{\parskip}{2ex}
+\setlength{\textwidth}{160mm} \setlength{\topmargin}{-6mm}
+\setlength{\textheight}{230mm}
+
+\setlength{\oddsidemargin}{0mm} \setlength{\evensidemargin}{0mm}
+
+\clubpenalty=1000000 \widowpenalty=1000000

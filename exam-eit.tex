@@ -1,67 +1,63 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%% Hauptdokument
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
+%% Main Document
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \documentclass[12pt, a4paper, twoside]{exam}
-\usepackage{ german,
-             %umlaut,
-             makeidx,
-             amsfonts, epsf,
-             amsmath,
-             bibgerm,
-             epsfig,
-             fancyheadings,
-             subfigure}
-\usepackage[utf8]{inputenc} % set up unicode input
-\usepackage[T1]{fontenc} % set 8-bit font enconding
-	% see: http://tex.stackexchange.com/questions/664/why-should-i-use-usepackaget1fontenc
-\usepackage{paratype} % PTSans - corporate design font of the University of Kaiserslautern
-	\renewcommand{\familydefault}{\sfdefault}
-\usepackage{wallpaper} % for background image on title page
 
-\usepackage{amsthm,amssymb,longtable,array,bm,varioref,graphicx,url,moreverb,ifthen,mdwlist,icomma}
-\usepackage{capt-of}
-\usepackage[english]{babel}
-\usepackage{layout,ae,float,trsym,trfsigns}
-\usepackage[nice]{units}
-\usepackage[dvips]{rotating}
-\usepackage[dvips]{geometry}
-\usepackage{rotating}
-\usepackage{lastpage}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%% Formatierungen
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\setlength{\parindent}{0cm}
-\setlength{\parskip}{2ex}
-\setlength{\textwidth}{160mm} \setlength{\topmargin}{-6mm}
-\setlength{\textheight}{230mm}
-
-\setlength{\oddsidemargin}{0mm} \setlength{\evensidemargin}{0mm}
-
-\clubpenalty=1000000 \widowpenalty=1000000
-
-\include{settings}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%% Beginn des Dokumentes
+%% Language Configuration
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{etoolbox}
+\newtoggle{isGerman}
+\togglefalse{isGerman}
+
+% uncomment this line for German document
+%\toggletrue{isGerman}
+
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Packages
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% import global list of packages
+\input{includes/packages.tex}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Metadata
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newcommand{\examTitleLong}{\todo{<your long exam title>}}
+\newcommand{\examTitleShort}{\todo{<your short exam title>}}
+\newcommand{\examID}{\todo{<your exam ID>}}
+\newcommand{\examDate}{\todo{<your exam date>}}
+\newcommand{\examPeriod}{\todo{<your exam period / semester>}}
+\newcommand{\allowedNumberOfSupportPages}{\todo{<your number of allowed additional sheets>}}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Document Configuration
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% import global settings file
+\input{includes/settings.tex}
+
+
+
 \begin{document}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%% Einstellung der FancyHeadings (später durch Koma ersetzen!)
+%% Einstellung der FancyHeadings (s\päter durch Koma ersetzen!)
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \pagestyle{fancy}
 
 \lhead
    [\sc
-   	Exam \pruefungsnummer~\pruefungsnamekurz
+   	Exam \examID~\examTitleShort
    ]
    {\sc
    Name: \hspace{6.5cm} Matriculation Number:}
 
 \rhead
    [\sc
-   	\pruefungszeitraum 
+   	\examPeriod 
  	 ]
    {
    }
@@ -70,35 +66,34 @@
 \cfoot{--\hspace{1ex}page \thepage \hspace{1ex}of\hspace{1ex} \pageref{LastPage} \hspace{1ex}--}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%% Deckblatt
+%% Front Page
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \include{frontpage}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%% Punkteberechnung
+%% Tables of Points
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \include{points}
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%% Aufgaben
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Questions / Tasks
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{questions}
-\clearpage
 
+\clearpage
 \input{tasks/task1}
+\todo{add your questions here}
 \clearpage
 
-% TODO: Add More tasks here
 
 \end{questions}
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Formulas / References
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \include{Formeln/Correspondence_Table}
 
-%%%%%%%%%%%%%%%%%
+
 
 \end{document}
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-
