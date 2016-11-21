@@ -10,7 +10,7 @@
 ###
 ### Final result:
 ###   % cat Makefile
-TARGET=exam-eit
+TARGET=main
 ###   PDFVIEWER=open -a 'Adobe Acrobat Professional'
 ###   AFTERALL=mypostprocessingstep
 ###   include Makefile.include
