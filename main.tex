@@ -5,33 +5,43 @@
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%% Language Configuration
+%% EIT Package and Language Settings
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\usepackage{etoolbox}
-\newtoggle{isGerman}
-\togglefalse{isGerman}
 
-% TODO: uncomment this line for German document
-%\toggletrue{isGerman}
+% document with serif font
+% use [de] option for German documents
+%\usepackage{style-eit-latex/EIT}
+%\usepackage[de]{style-eit-latex/EIT}
+
+% use [pt] option for PT Sans without serif
+\usepackage[pt]{style-eit-latex/EIT}
+%\usepackage[pt, de]{style-eit-latex/EIT}
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%% Packages
+%% Custom Packages
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% import global list of packages
-\input{includes/packages.tex}
 
 % TODO: add own packages here
+
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %% Metadata
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % TODO: add your exam metadata here
-\newcommand{\examTitleLong}{\todo{<your long exam title>}}
-\newcommand{\examTitleShort}{\todo{<your short exam title>}}
-\newcommand{\examID}{\todo{<your exam ID>}}
-\newcommand{\examDate}{\todo{<your exam date>}}
-\newcommand{\examPeriod}{\todo{<your exam period / semester>}}
+\newcommand{\examTitleLong}{\todo{<long title>}}
+\newcommand{\examTitleShort}{\todo{<short title>}}
+\newcommand{\examID}{\todo{<ID>}}
+\newcommand{\examDate}{\todo{<exam date>}}
+\newcommand{\examPeriod}{\todo{<semester>}}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Hyphenation
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% correct bad hyphenation here
+\hyphenation{net-works semi-conduc-tor quad-ra-ture mat-ches trans-form meth-od}
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -51,17 +61,20 @@
 % apply header & footer style
 \pagestyle{otherpages}
 
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %% Front Page
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\input{frontpage.tex}
+\input{includes/frontpage.tex}
 \clearpage
+
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %% Tables for Scoring
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \input{includes/scoring.tex}
 \clearpage
+
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %% Questions / Tasks
@@ -79,13 +92,13 @@
 \clearpage
 \end{questions}
 
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %% Formulas / References
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 % TODO: add your own references here
 \include{references/example.tex}
-
 
 
 \end{document}

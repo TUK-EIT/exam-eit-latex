@@ -11,6 +11,7 @@
 	\qformat{\textbf{\large Question \thequestion}\quad\textbf{\large(\thepoints)}\hfill\rule[-3ex]{0ex}{3ex}}
 }
 
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %% Global Formatting Settings
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -22,6 +23,9 @@
 \setlength{\oddsidemargin}{0mm} \setlength{\evensidemargin}{0mm}
 
 \clubpenalty=1000000 \widowpenalty=1000000
+
+% change figure labels to abbreviated versions
+\addto\captionsenglish{\renewcommand{\figurename}{Fig.}}
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -36,12 +40,15 @@
 	\renewcommand{\headrulewidth}{0pt}
 
 	\fancyfoot[L]{
+		\color{tuk-coldgrey} \pt \footnotesize
 		\examID~\examTitleShort
 	}
 	\fancyfoot[C]{
+		\color{tuk-coldgrey} \pt \footnotesize
 		\examPeriod
 	}
 	\fancyfoot[R]{
+		\color{tuk-coldgrey} \pt \footnotesize
 		\iftoggle{isGerman}{
   			Seite \thepage\ von \pageref{LastPage}
 		}{
@@ -63,12 +70,15 @@
 	}
 
 	\fancyfoot[L]{
+		\color{tuk-coldgrey} \pt \footnotesize
 		\examID~\examTitleShort
 	}
 	\fancyfoot[C]{
+		\color{tuk-coldgrey} \pt \footnotesize
 		\examPeriod
 	}
 	\fancyfoot[R]{
+		\color{tuk-coldgrey} \pt \footnotesize
 		\iftoggle{isGerman}{
   			Seite \thepage\ von \pageref{LastPage}
 		}{
@@ -79,81 +89,50 @@
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%% Additional Commands
+%% Additional Command Definitions
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-% define todo command
-\definecolor{darkred}{rgb}{.6,0,0}
-\newcommand{\todo}[1]{{\bf \color{darkred}TODO: [{#1}]}}
-
-
-
-% TODO: check and clean following packages
-
-%
-% AMS-Operatoren
-%
+% AMS operators
 \DeclareMathOperator{\sign}{sign}
 
-%
-% Punkte auf der Nebendiagonale
-%
+% points on minor diagonal
 \newcommand{\rdots}{\mathinner{
   \mkern1mu\raise1pt\hbox{.}
   \mkern2mu\raise4pt\hbox{.}
   \mkern2mu\raise7pt\vbox{\kern7pt\hbox{.}}\mkern1mu}}
 
-%
-%Vektoren/Matizen fett
-%
+% bold vectors and matrices
 \renewcommand{\vec}[1]{\boldsymbol{#1}}
 
-%ermˆglicht fette griechische Buchstaben
+% bold Greek letters
 \newcommand{\MB}[1]{{\mbox{\mathversion{bold}$#1$}}}
 
-%
-%Matrix (runde Klammer)
-%
+% matrix with round brackets
 \newcommand{\mat}[1]{\begin{pmatrix}#1\end{pmatrix}}
 
-%
-%Darstellung von Hinweisen
-%
+% hints and annotations
 \newcommand{\Hinweis}{\textbf{Hinweis:~}}
 \newcommand{\Hint}{\textbf{Hint:~}}
 \newcommand{\Annotation}{\textbf{Annotation:~}}
 
-%
-%Partielle Ableitung mit Potenz.
-%Nutzung: \parfr[potenz(optional)]{z‰hler}{nenner}
-%
+% partial derivation with power
+% Use: \parfr[<power>]{<nominator>}{<denominator>}
 \newcommand{\parfr}[3][\empty]{
 	\ifthenelse{\equal{#1}{\empty}}
 	{\frac{\partial {#2}}{\partial {#3}}}
 	{\frac{\partial^{#1} {#2}}{\partial {#3}^{#1}}}
 	}
 	
-%
-%Normale Ableitung mit Potenz
-%Nutzung: \dfr[potenz(optional)]{z‰hler}{nenner}
-%
+% normal derivation with power
+% Use: \dfr[<power>]{<nominator>}{<denominator>}
 \newcommand{\dfr}[3][\empty]{
 	\ifthenelse{\equal{#1}{\empty}}
 	{\frac{\text{d} {#2}}{\text{d} {#3}}}
 	{\frac{\text{d}^{#1} {#2}}{\text{d} {#3}^{#1}}}
 	}
 
-%
-%Zahl in einem Kreis, geht im Text und auch in eine Formel
-%
+% number in a circle (in text or formula)
 \newcommand{\mycirc}[1]{\mbox{\textcircled{\footnotesize #1}}}
 
-%
-%Bepunktung, geht im Text und auch in eine Formel
-%
-\newcommand{\Punkte}[1]{\text{~\textbf{($\boldsymbol{#1}$~P)}}}
-
-
-\addto\captionsenglish{\renewcommand{\figurename}{Fig.}}
-
-
+% explicit points notation
+\newcommand{\Points}[1]{\text{~\textbf{($\boldsymbol{#1}$~P)}}}
