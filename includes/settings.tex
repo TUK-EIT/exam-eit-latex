@@ -28,6 +28,10 @@
 % change figure labels to abbreviated versions
 \addto\captionsenglish{\renewcommand{\figurename}{Fig.}}
 
+% print EIT header on every page if required
+\nottoggle{headerEveryPage}{
+	\CenterWallPaper{1.0}{images/background-eit.pdf}
+}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %% Headers & Footers
@@ -60,13 +64,21 @@
 
 % page style for all other pages
 \fancypagestyle{otherpages}{
-	\fancyhf{}
 
-	\fancyhead[L]{
-		\iftoggle{isGerman}{
-  			Name: \hspace{7cm} Matrikelnummer:
-		}{
-			Name: \hspace{7cm} Matriculation Number:
+	% remove top line
+	\nottoggle{headerEveryPage}{
+		\renewcommand{\headrulewidth}{0pt}	
+	}
+
+	% print name and matriculation header on every page if required
+	\iftoggle{headerEveryPage}{
+		\fancyhf{}
+		\fancyhead[L]{
+			\iftoggle{isGerman}{
+  				Name: \hspace{7cm} Matrikelnummer:
+			}{
+				Name: \hspace{7cm} Matriculation Number:
+			}
 		}
 	}
 
